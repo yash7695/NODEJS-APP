@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+    nodejs 'node18' // match the name you added in Jenkins config
+    }
+
     environment {
         AWS_REGION = 'ap-south-1'
         
