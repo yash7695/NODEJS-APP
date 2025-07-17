@@ -1,13 +1,12 @@
 pipeline {
     agent any
 
-    tools {
-    nodejs 'node18' // match the name you added in Jenkins config
-    }
-
     environment {
         AWS_REGION = 'ap-south-1'
-        
+        ECR_REPO = '120569645875.dkr.ecr.ap-south-1.amazonaws.com/noderepo'
+        IMAGE_TAG = "v1-${BUILD_NUMBER}"
+        AWS_ACCESS_KEY_ID = credentials('AKIARYEUCZMZ5QCJD67S')
+        AWS_SECRET_ACCESS_KEY = credentials('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')
     }
 
     stages {
