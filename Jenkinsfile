@@ -1,10 +1,6 @@
 pipeline {
   agent any
 
-  tools {
-    nodejs 'node18'  // This must match the name you gave above
-  }
-
   environment {
     AWS_REGION = "ap-south-1"
     IMAGE_NAME = "nodejs-app"
